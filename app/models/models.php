@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Controllers\DB;
 
+
 abstract class BaseModel {
 
 	protected $db;
@@ -11,4 +12,8 @@ abstract class BaseModel {
 	function __construct(){
 		$this->db = DB::connect()->fluent;
 	}
+	
+
+	
+	
 }

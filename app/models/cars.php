@@ -4,8 +4,11 @@ namespace App\Models;
 
 
 class Cars extends BaseModel {
-
 		
+		
+	function save($data) {
+		$this->db->insertInto('cars')->values($data)->execute();
+	}
 	function getCar($id=NULL) {
 		$query = $this->db->from('cars')
 		   ->where('id', $id)
@@ -17,6 +20,8 @@ class Cars extends BaseModel {
 		$query = $this->db->from('cars');
 		   return $query;
 	}
+	
+
 
 
 }

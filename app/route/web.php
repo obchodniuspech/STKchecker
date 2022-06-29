@@ -9,6 +9,8 @@ $router->map('GET', '', function() {
 $router->map('GET', 'cars/all/',array("Controller"=>"App\Controllers\Cars","Action"=>"getAll"),"get.car.all");
 
 $router->map('GET', 'cars/[i:id]/',array("Controller"=>"App\Controllers\Cars","Action"=>"getCar","Id"=>"5"),"get.car");
+$router->map('GET', 'cars/new/',array("Controller"=>"App\Controllers\Cars","Action"=>"create"),"new.car");
+$router->map('POST', 'cars/save/',array("Controller"=>"App\Controllers\Cars","Action"=>"save"),"save.car");
 
 
 

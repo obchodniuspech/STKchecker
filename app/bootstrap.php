@@ -13,11 +13,20 @@ include __DIR__."/models/models.php";
 include __DIR__."/models/cars.php";
 
 
+/* $users = new User;
+// create new user
+$user = new User();
+$user->username = "username";
+$user->email = "mail@example.org";
+$user->save();
 
+print_r($users);
+
+exit; */
 
 
 $router = new AltoRouter();
-$router->setBasePath('/fio_ukazka/');
+$router->setBasePath('/STKChecker/');
 
 
 
