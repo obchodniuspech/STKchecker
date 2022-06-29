@@ -1,6 +1,5 @@
 <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-<div class="container mt-5">
 	<a href="<?php echo e($router->generate('new.car')); ?>"><button class="btn btn-primary mb-3">Přidat vozidlo</button></a>
 	<table class="table table-striped">
 	<thead>
@@ -20,6 +19,5 @@
 	
 	</table>
 
-</div>
 
 <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/michalpesat/Documents/GitHub/STKchecker/view/carsAll.blade.php ENDPATH**/ ?>

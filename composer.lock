@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e82a196af81786d7a61b396d6f51951",
+    "content-hash": "7631f255bc10269b035230e0a9f648ed",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -264,6 +264,53 @@
                 "source": "https://github.com/envms/fluentpdo/tree/v2.2.4"
             },
             "time": "2022-01-27T21:49:44+00:00"
+        },
+        {
+            "name": "formr/formr",
+            "version": "1.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/formr/Formr.git",
+                "reference": "bf08c0f095277ff51f860e689f8b13bbcb54380e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/formr/Formr/zipball/bf08c0f095277ff51f860e689f8b13bbcb54380e",
+                "reference": "bf08c0f095277ff51f860e689f8b13bbcb54380e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "class.formr.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Gavin",
+                    "homepage": "https://formr.github.io",
+                    "role": "Original Author"
+                }
+            ],
+            "description": "Formr is a PHP micro-framework which helps you build and validate forms quickly, painlessly, and without all the messy overhead.",
+            "support": {
+                "issues": "https://github.com/formr/Formr/issues",
+                "source": "https://github.com/formr/Formr/tree/1.4.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/timgavin",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-06-23T23:51:40+00:00"
         },
         {
             "name": "illuminate/bus",

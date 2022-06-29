@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '4033e1a3aa4bbcab5bd44b8a20dfa6cf825cdfc6',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '4033e1a3aa4bbcab5bd44b8a20dfa6cf825cdfc6',
             'dev_requirement' => false,
         ),
         'altorouter/altorouter' => array(
@@ -53,6 +53,15 @@
             'install_path' => __DIR__ . '/../envms/fluentpdo',
             'aliases' => array(),
             'reference' => '1985e0e8406a56140f387bc9bec786b419cbeccc',
+            'dev_requirement' => false,
+        ),
+        'formr/formr' => array(
+            'pretty_version' => '1.4.5',
+            'version' => '1.4.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../formr/formr',
+            'aliases' => array(),
+            'reference' => 'bf08c0f095277ff51f860e689f8b13bbcb54380e',
             'dev_requirement' => false,
         ),
         'illuminate/bus' => array(

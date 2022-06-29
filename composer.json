@@ -8,6 +8,7 @@
         "jenssegers/blade": "^1.4",
         "altorouter/altorouter": "^1.0",
         "aternos/model": "^0.3.7",
-        "envms/fluentpdo": "^2.2"
+        "envms/fluentpdo": "^2.2",
+        "formr/formr": "^1.4"
     }
 }

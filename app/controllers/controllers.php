@@ -17,6 +17,7 @@ class BasicController {
 			
 			try {
 				$this->blade = new Blade('view', 'cache');
+				$this->forms = new \Formr\Formr('bootstrap');
 
 			}
 			catch (\Exception $ex) {
@@ -30,5 +31,12 @@ class BasicController {
 			self::$blade = new self();
 		}
 		return self::$blade;
+	}
+	
+	public static function createForm() {
+		if(!isset(self::$forms)) {
+			self::$forms = new self();
+		}
+		return self::$forms;
 	}
 }

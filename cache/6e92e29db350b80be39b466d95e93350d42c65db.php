@@ -1,6 +1,7 @@
 <?php echo $__env->make("header", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 <h1>Vytvoř nové vozidlo</h1>
+<?php echo e($form->create_form('Name,rz,stkValidity')); ?>
 
 
 <?php echo $__env->make("footer", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

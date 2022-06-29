@@ -9,12 +9,18 @@ class CarsController extends BasicController {
 	
 	function create() {
 		global $router;
-		echo $this->blade->render('cars.new', ['router'=>$router]);
+		$this->forms = new \Formr\Formr('bootstrap');
+		$this->forms->action = $router->generate('save.car');
+		echo $this->blade->render('cars.new', ['router'=>$router,'form'=>$this->forms]);
 	}
 	
 	function save() {
+		global $router;
 		$cars = new Cars;
+		unset($_POST['FormrID']);
+		unset($_POST['button']);
 		$cars->save($_POST);
+		Header("Location: ".$router->generate('get.car.all'));
 	}
 	
 	function getCar($id) {
