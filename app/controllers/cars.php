@@ -19,8 +19,6 @@ class CarsController extends BasicController {
 	function getAll() {
 		$cars = new Cars;
 		$cars = $cars->getAll();
-		foreach ($cars AS $car) {
-			echo "show car ".$car['name'] .$car['rz'] ." details<br>";
-		}
+		echo $this->blade->render('carsAll', ['cars' => $cars]);
 	}
 }

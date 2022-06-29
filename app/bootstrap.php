@@ -5,7 +5,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-use App\Controllers\DB;
 include __DIR__."/config/config.php";
 include __DIR__."/controllers/database.php";
 include __DIR__."/controllers/controllers.php";
@@ -13,24 +12,13 @@ include __DIR__."/controllers/cars.php";
 include __DIR__."/models/models.php";
 include __DIR__."/models/cars.php";
 
-use Illuminate\View\Factory;
-use Illuminate\View\View;
-use Illuminate\View\Compilers\BladeCompiler;
-use Illuminate\View\ViewFinderInterface;
-use Jenssegers\Blade\Blade;
-use PHPUnit\Framework\TestCase;
-
-use App\Models;
-use App\Controllers;
 
 
-$pdo = new PDO('mysql:dbname=stkCheck', 'stkCheck', 'stkCheck100%');
-$fluent = new \Envms\FluentPDO\Query($pdo);	
+
+
 $router = new AltoRouter();
 $router->setBasePath('/fio_ukazka/');
-$blade = new Blade('view', 'cache');
 
-$cars = new Controllers\CarsController();
 
 
 include "route/web.php";

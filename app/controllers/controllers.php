@@ -1,19 +1,34 @@
 <?php
 namespace App\Controllers;
 
+
+use Illuminate\View\Factory;
+use Illuminate\View\View;
+use Illuminate\View\Compilers\BladeCompiler;
+use Illuminate\View\ViewFinderInterface;
+use Jenssegers\Blade\Blade;
+use PHPUnit\Framework\TestCase;
+
+
 class BasicController {
 	
-	private static $blade = null;
-	private static $fluent = null;
-
 
 	function __construct() {
-		global $blade;
-		// = $blade;
-/* 			echo "ahoj"; */
-			$pdo = new \PDO('mysql:dbname=stkCheck', 'stkCheck', 'stkCheck100%');
-			$fluent = new \Envms\FluentPDO\Query($pdo);	
-			/* print_r($fluent); */
+			
+			try {
+				$this->blade = new Blade('view', 'cache');
 
+			}
+			catch (\Exception $ex) {
+				$this->errors = $ex;
+			}
+
+	}
+	
+	public static function createView() {
+		if(!isset(self::$blade)) {
+			self::$blade = new self();
+		}
+		return self::$blade;
 	}
 }
