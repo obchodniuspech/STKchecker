@@ -1,0 +1,13 @@
+{
+    "config": {
+        "platform": {
+            "php": "7.3"
+        }
+    },
+    "require": {
+        "jenssegers/blade": "^1.4",
+        "altorouter/altorouter": "^1.0",
+        "aternos/model": "^0.3.7",
+        "envms/fluentpdo": "^2.2"
+    }
+}

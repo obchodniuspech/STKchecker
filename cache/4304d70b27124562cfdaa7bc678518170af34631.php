@@ -1,0 +1,1 @@
+homepage <?php echo e($name); ?><?php /**PATH /Users/michalpesat/Documents/GitHub/fio_ukazka/view/homepage.blade.php ENDPATH**/ ?>
