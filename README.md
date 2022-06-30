@@ -10,3 +10,7 @@
 ## Todos
 
 - Almost everything :)
+- prihlasovani uzivatele (+ prirazeni jeho vozidel k nemu)
+- napojeni na SMS sluzbu
+- dobijeni kreditu uzivatelem (moznost priradit uzivateli kredit zdarma)
+- odesilani emailu
