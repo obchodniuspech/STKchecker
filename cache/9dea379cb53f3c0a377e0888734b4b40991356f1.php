@@ -12,7 +12,7 @@
 			<tr>
 				<td><a href="<?php echo e($router->generate('get.car', ['id' => $car['id']])); ?>"><?php echo e($car['name']); ?></a></td>
 				<td><?php echo e($car['rz']); ?></td>
-				<td><?php echo e($car['stkValidity']); ?></td>
+				<td><?php echo e($car['stk']); ?></td>
 			</tr>
 		<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 	</tbody>

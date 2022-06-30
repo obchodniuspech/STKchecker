@@ -12,7 +12,7 @@
 			<tr>
 				<td><a href="{{$router->generate('get.car', ['id' => $car['id']])}}">{{$car['name']}}</a></td>
 				<td>{{$car['rz']}}</td>
-				<td>{{$car['stkValidity']}}</td>
+				<td>{{$car['stk']}}</td>
 			</tr>
 		@endforeach
 	</tbody>

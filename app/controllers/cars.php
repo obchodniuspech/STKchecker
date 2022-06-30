@@ -10,6 +10,14 @@ class CarsController extends BasicController {
 	function create() {
 		global $router;
 		$this->forms = new \Formr\Formr('bootstrap');
+		$this->forms = '*';
+		$this->forms->action = $router->generate('save.car');
+		echo $this->blade->render('cars.new', ['router'=>$router,'form'=>$this->forms]);
+	}
+	
+	function edit() {
+		global $router;
+		$this->forms = new \Formr\Formr('bootstrap');
 		$this->forms->action = $router->generate('save.car');
 		echo $this->blade->render('cars.new', ['router'=>$router,'form'=>$this->forms]);
 	}
@@ -18,19 +26,17 @@ class CarsController extends BasicController {
 		global $router;
 		$cars = new Cars;
 		unset($_POST['FormrID']);
-		unset($_POST['button']);
+		unset($_POST['submit']);
+
 		$cars->save($_POST);
 		Header("Location: ".$router->generate('get.car.all'));
 	}
 	
 	function getCar($id) {
+		global $router;
 		$cars = new Cars;
-		$cars = $cars->getCar($id);
-		foreach ($cars AS $car) {
-			echo "show car ".$car['name'] ." details";
-		}
-		
-		/* echo $blade->make('homepage', ['name' => 'John Doe'])->render(); */
+		$car = $cars->getCar($id);		
+		echo $this->blade->render('cars.edit', ['router'=>$router,'form'=>$this->forms,"car"=>$car]);
 	}
 	
 	function getAll() {

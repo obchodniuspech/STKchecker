@@ -7,13 +7,20 @@ class Cars extends BaseModel {
 		
 		
 	function save($data) {
-		$this->db->insertInto('cars')->values($data)->execute();
+		if (isset($data['id'])) {
+			$this->db->update('cars', $data, $data['id'])->execute();
+		}
+		else {
+			$this->db->insertInto('cars')->values($data)->execute();
+		}
 	}
 	function getCar($id=NULL) {
 		$query = $this->db->from('cars')
 		   ->where('id', $id)
-		   ->limit($id);
-		   return $query;
+		   ->limit(1);
+		   foreach ($query AS $car) {
+			   return $car;
+		   }
 	}
 	
 	function getAll() {
