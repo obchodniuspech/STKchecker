@@ -15,5 +15,17 @@
 </head>
 <body>
 	
+<div class="container-fluid">
+	<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+	  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+		<span class="fs-4">STK Check</span>
+	  </a>
+
+	  <ul class="nav nav-pills">
+		<li class="nav-item"><a href="<?php echo e($router->generate('get.car.all')); ?>" class="nav-link">Všechna vozidla</a></li>
+	  </ul>
+	</header>
+  </div>	
+	
 	<div class="container mt-5">
 <?php /**PATH /Users/michalpesat/Documents/GitHub/STKchecker/view/header.blade.php ENDPATH**/ ?>
