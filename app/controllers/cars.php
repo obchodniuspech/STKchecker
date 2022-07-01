@@ -10,8 +10,6 @@ class CarsController extends BasicController {
 	function create() {
 		global $router;
 		$this->forms = new \Formr\Formr('bootstrap');
-		$this->forms = '*';
-		$this->forms->action = $router->generate('save.car');
 		echo $this->blade->render('cars.new', ['router'=>$router,'form'=>$this->forms]);
 	}
 	
