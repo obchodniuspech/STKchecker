@@ -15,12 +15,10 @@ class Cars extends BaseModel {
 		}
 	}
 	function getCar($id=NULL) {
-		$query = $this->db->from('cars')
+		$car = $this->db->from('cars')
 		   ->where('id', $id)
-		   ->limit(1);
-		   foreach ($query AS $car) {
-			   return $car;
-		   }
+		   ->fetch();
+		   return $car;
 	}
 	
 	function getAll() {
